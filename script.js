@@ -44,6 +44,7 @@ function setMode(selection)
 function playTurn(input)
 {
     let word = "";
+    input = input.toLowerCase();
     if(words.indexOf(input)=='-1')
         {
             gameinfo.innerHTML = "Word does not belong to the list";
