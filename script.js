@@ -181,8 +181,9 @@ function genDom()
     playButton.addEventListener("click",()=>{
         playTurn(inputBox.value);
     });
-    inputBox.addEventListener("keydown", ()=>{
-        playTurn(inputBox.value);
+    inputBox.addEventListener("keydown", (e)=>{
+        if(e.key === "Enter")
+            playTurn(inputBox.value);
     });
     gameinfo = document.createElement("h2");
     gameinfo.innerHTML = "";
