@@ -25,7 +25,7 @@ start();
 function start()
 {
     dialog.showModal();
-    let index = Math.floor(Math.random() * (3102 - 0 + 1)) + 0; //lrn
+    let index = Math.floor(Math.random() * (3102 - 0 + 1)) + 0;
     tries = 0;
     ans = words[index];
     triedWords = [];
@@ -180,7 +180,10 @@ function genDom()
     playButton.innerHTML = "Guess!";
     playButton.addEventListener("click",()=>{
         playTurn(inputBox.value);
-    })
+    });
+    inputBox.addEventListener("keydown", ()=>{
+        playTurn(inputBox.value);
+    });
     gameinfo = document.createElement("h2");
     gameinfo.innerHTML = "";
     gameinfo.style.textAlign = "center";
